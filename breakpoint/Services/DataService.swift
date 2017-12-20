@@ -16,6 +16,7 @@ class DataService {
     // Singleton
     static let instance = DataService()
     
+    
     // Instance Variables
     
     private var _REF_BASE = DB_BASE
@@ -23,6 +24,7 @@ class DataService {
     private var _REF_GROUPS = DB_BASE.child("groups")
     private var _REF_FEED = DB_BASE.child("feed")
     
+    /* Publica Variables to set values and use the data. */
     var REF_BASE: DatabaseReference {
         return _REF_BASE
     }
@@ -39,7 +41,47 @@ class DataService {
         return _REF_FEED
     }
     
+    
+    // Functions.
+    
+    /* Create DB User Function. */
+    func createDBUser(uid: String, userData: Dictionary<String, Any>) {
+        REF_USERS.child(uid).updateChildValues(userData)
+            //-> uid is Unique Identifier for the user.
+    } // END Create DB User Function.
+    
+    
 } // END Class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
