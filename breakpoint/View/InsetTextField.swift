@@ -19,7 +19,8 @@ class InsetTextField: UITextField {
     
     /* Awake From Nib Function. */
     override func awakeFromNib() {
-        setupView()
+        let placeholder = NSAttributedString(string: self.placeholder!, attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)])
+        self.attributedPlaceholder = placeholder
         super.awakeFromNib()
     } // END Awake From Nib Function.
     
@@ -43,14 +44,6 @@ class InsetTextField: UITextField {
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, padding)
     } // END Placeholder Rect Function.
-    
-    
-    /* Setup View Function. */
-    func setupView() {
-        let placeholder = NSAttributedString(string: self.placeholder!, attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)])
-        
-        self.attributedPlaceholder = placeholder
-    } // END Setup View Function.
     
     
 } // END Class.
