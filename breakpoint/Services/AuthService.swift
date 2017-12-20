@@ -16,6 +16,16 @@ class AuthService {
     
     // Functions.
     
+    /* Register User Function. */
+    func registerUser() {
+        
+    } // END Register User Function.
     
     
-}
+    /* Login User Function. */
+    func loginUser() {
+        
+    } // END Login User Function.
+    
+    
+} // END Class.
