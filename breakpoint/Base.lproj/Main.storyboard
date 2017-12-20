@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--View Controller-->
+        <!--AuthVC-->
         <scene sceneID="UmL-xx-mnQ">
             <objects>
-                <viewController id="lih-kx-zSd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthVC" id="lih-kx-zSd" customClass="AuthVC" customModule="breakpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="msT-jr-qid">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,10 +184,10 @@
             </objects>
             <point key="canvasLocation" x="-1678" y="141"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="5Ps-06-8bK">
             <objects>
-                <viewController id="qcj-ud-9we" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="qcj-ud-9we" customClass="LoginVC" customModule="breakpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6pN-7P-sVy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
