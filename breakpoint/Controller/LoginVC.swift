@@ -12,7 +12,8 @@ class LoginVC: UIViewController {
     
     // IBOutlets.
     
-    @IBOutlet weak var emailField: UIStackView!
+    
+    @IBOutlet weak var emailField: InsetTextField!
     @IBOutlet weak var passwordField: InsetTextField!
     
     
@@ -22,8 +23,8 @@ class LoginVC: UIViewController {
     /* View Did Load Function. */
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        emailField.delegate = self
+        passwordField.delegate = self
     } // END View Did Load Function.
     
     
@@ -37,16 +38,64 @@ class LoginVC: UIViewController {
     /* Sign In Button Was Pressed Function. */
     @IBAction func signInBtnWasPressed(_ sender: Any) {
         
+        if emailField.text != nil && passwordField.text != nil {
+            
+            // Try to sign in.
+            AuthService.instance.loginUser(withEmail: emailField.text!, andPassword: passwordField.text!, loginComplete: { (success, loginError) in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    print(String(describing: loginError?.localizedDescription))
+                }
+                
+                // If can't log in, use the info the user entered and try to register user.
+                AuthService.instance.registerUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, userCreationComplete: { (success, registrtationError) in
+                    if success {
+                        AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, loginComplete: { (success, nil) in
+                            self.dismiss(animated: true, completion: nil)
+                            print("Successfully registered user")
+                        })
+                    } else {
+                        print(String(describing: registrtationError?.localizedDescription))
+                    }
+                })
+            })
+        }
+        
+        
     } // END Sign In Button Was Pressed Function.
     
     
     
     /* Close Button Was Pressed Function. */
     @IBAction func closeBtnWasPressed(_ sender: Any) {
-        
+        dismiss(animated: true, completion: nil)
     } // END Close Button Was Pressed Function.
     
     
     
     
 } // END Class.
+
+
+//
+
+extension LoginVC: UITextFieldDelegate {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
