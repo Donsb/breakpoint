@@ -51,6 +51,20 @@ class DataService {
     } // END Create DB User Function.
     
     
+    /* Upload Post Function. */
+    func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool)-> ()) {
+        
+        if groupKey != nil {
+            // Send to group ref
+        } else {
+            REF_FEED.childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            sendComplete(true)
+        }
+        
+        
+    } // END Upload Post Function.
+    
+    
 } // END Class.
 
 
