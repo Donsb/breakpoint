@@ -10,6 +10,12 @@ import UIKit
 
 class LoginVC: UIViewController {
     
+    // IBOutlets.
+    
+    @IBOutlet weak var emailField: UIStackView!
+    @IBOutlet weak var passwordField: InsetTextField!
+    
+    
     // Functions.
     
     
@@ -26,6 +32,21 @@ class LoginVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     } // END Did Receive Memory Warning Function.
+    
+    
+    /* Sign In Button Was Pressed Function. */
+    @IBAction func signInBtnWasPressed(_ sender: Any) {
+        
+    } // END Sign In Button Was Pressed Function.
+    
+    
+    
+    /* Close Button Was Pressed Function. */
+    @IBAction func closeBtnWasPressed(_ sender: Any) {
+        
+    } // END Close Button Was Pressed Function.
+    
+    
     
     
 } // END Class.
