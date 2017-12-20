@@ -22,8 +22,6 @@ class MeVC: UIViewController {
     /* View Did Load Function. */
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     } // END View Did Load Function.
     
     
@@ -36,7 +34,7 @@ class MeVC: UIViewController {
     
     /* Sign Out Button Was Pressed Function. */
     @IBAction func signOutBtnWasPressed(_ sender: Any) {
-        
+        // Sign Out Code.
     }// END Sign Out Button Was Pressed Function.
     
     
