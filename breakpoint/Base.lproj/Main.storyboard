@@ -162,7 +162,7 @@
         <!--Me-->
         <scene sceneID="OtO-lE-UOn">
             <objects>
-                <viewController id="ViV-8M-ewz" sceneMemberID="viewController">
+                <viewController id="ViV-8M-ewz" customClass="MeVC" customModule="breakpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hQe-vf-5nc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,6 +187,9 @@
                                             <constraint firstAttribute="width" constant="30" id="XIy-MK-jGC"/>
                                         </constraints>
                                         <state key="normal" image="logoutIcon"/>
+                                        <connections>
+                                            <action selector="signOutBtnWasPressed:" destination="ViV-8M-ewz" eventType="touchUpInside" id="ndH-Al-vVp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -259,6 +262,11 @@
                         <viewLayoutGuide key="safeArea" id="GnF-OP-q0E"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" image="me-tabIcon" selectedImage="me-tabIcon" id="hDc-Jz-gnD"/>
+                    <connections>
+                        <outlet property="emailLbl" destination="dVB-bI-I0a" id="s5G-RP-I77"/>
+                        <outlet property="profileImage" destination="Zdz-dX-7vr" id="bc0-Eg-icm"/>
+                        <outlet property="tableView" destination="fHh-ic-9oa" id="JrI-EJ-xOY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCL-qQ-9sK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
