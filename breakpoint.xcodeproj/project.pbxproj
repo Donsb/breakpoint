@@ -14,6 +14,7 @@
 		A5D9CE941FE9D461002AF161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D9CE931FE9D461002AF161 /* Assets.xcassets */; };
 		A5D9CE971FE9D461002AF161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D9CE951FE9D461002AF161 /* LaunchScreen.storyboard */; };
 		A5D9CEA41FE9DB2A002AF161 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5D9CEA31FE9DB2A002AF161 /* GoogleService-Info.plist */; };
+		A5D9CEA61FE9DE99002AF161 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9CEA51FE9DE99002AF161 /* DataService.swift */; };
 		E7E1E676886849745168028E /* Pods_breakpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EAEB35E7B0433BF6B71B92 /* Pods_breakpoint.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		A5D9CE961FE9D461002AF161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5D9CE981FE9D461002AF161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5D9CEA31FE9DB2A002AF161 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A5D9CEA51FE9DE99002AF161 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		ABD3EB7E9C3DFD53C816401A /* Pods-breakpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-breakpoint/Pods-breakpoint.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 		A5D9CEA21FE9D54B002AF161 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A5D9CEA51FE9DE99002AF161 /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				A5D9CE8F1FE9D461002AF161 /* SecondViewController.swift in Sources */,
 				A5D9CE8B1FE9D461002AF161 /* AppDelegate.swift in Sources */,
 				A5D9CE8D1FE9D461002AF161 /* FirstViewController.swift in Sources */,
+				A5D9CEA61FE9DE99002AF161 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

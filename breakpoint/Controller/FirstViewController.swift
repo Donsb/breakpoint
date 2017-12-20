@@ -10,9 +10,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    /*
-     Functions
-     */
+    // Functions.
     
     
     /* View Did Load Function. */

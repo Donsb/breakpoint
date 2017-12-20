@@ -10,9 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    /*
-     Functions.
-     */
+    // Functions.
     
     
     /* View Did Load Function. */
