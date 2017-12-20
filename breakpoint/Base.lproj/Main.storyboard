@@ -43,6 +43,9 @@
                                             <constraint firstAttribute="height" constant="30" id="rLw-Bt-keA"/>
                                         </constraints>
                                         <state key="normal" image="compose"/>
+                                        <connections>
+                                            <segue destination="a9H-Kw-Cv2" kind="presentation" id="D9r-h6-bHR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241378"/>
         </scene>
-        <!--View Controller-->
+        <!--Create PostVC-->
         <scene sceneID="4yF-hy-vJC">
             <objects>
-                <viewController id="a9H-Kw-Cv2" sceneMemberID="viewController">
+                <viewController id="a9H-Kw-Cv2" customClass="CreatePostVC" customModule="breakpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eMi-tk-YeV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,6 +114,9 @@
                                             <constraint firstAttribute="height" constant="30" id="ecl-6D-aQC"/>
                                         </constraints>
                                         <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closeBtnWasPressed:" destination="a9H-Kw-Cv2" eventType="touchUpInside" id="ocg-jM-glP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -155,6 +161,9 @@
                                 <state key="normal" title="  SEND" image="send">
                                     <color key="titleColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendBtnWasPressed:" destination="a9H-Kw-Cv2" eventType="touchUpInside" id="Ges-Vf-0lU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -177,6 +186,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tBK-fH-Pow"/>
                     </view>
+                    <connections>
+                        <outlet property="emailLbl" destination="5Nz-uf-lCX" id="fEZ-d3-D9V"/>
+                        <outlet property="profileImage" destination="n7n-41-66z" id="Wsh-Iv-FYX"/>
+                        <outlet property="sendBtn" destination="6Af-Yk-nai" id="3Vb-mX-NHY"/>
+                        <outlet property="textField" destination="SS3-w3-EN5" id="YVa-jl-rm8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ct-qU-rKY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
