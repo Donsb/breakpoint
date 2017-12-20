@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A55815F11FEADAED000A3391 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55815F01FEADAED000A3391 /* AuthVC.swift */; };
 		A55815F31FEADBBF000A3391 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55815F21FEADBBF000A3391 /* LoginVC.swift */; };
+		A55815F51FEADCA3000A3391 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55815F41FEADCA3000A3391 /* InsetTextField.swift */; };
 		A5D9CE8B1FE9D461002AF161 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9CE8A1FE9D461002AF161 /* AppDelegate.swift */; };
 		A5D9CE8D1FE9D461002AF161 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9CE8C1FE9D461002AF161 /* FirstViewController.swift */; };
 		A5D9CE8F1FE9D461002AF161 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9CE8E1FE9D461002AF161 /* SecondViewController.swift */; };
@@ -25,6 +26,7 @@
 		4BCBE80BC9BA4A29242E95D2 /* Pods-breakpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-breakpoint/Pods-breakpoint.release.xcconfig"; sourceTree = "<group>"; };
 		A55815F01FEADAED000A3391 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		A55815F21FEADBBF000A3391 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		A55815F41FEADCA3000A3391 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		A5D9CE871FE9D461002AF161 /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D9CE8A1FE9D461002AF161 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5D9CE8C1FE9D461002AF161 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		A5D9CE9F1FE9D504002AF161 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A55815F41FEADCA3000A3391 /* InsetTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				A55815F31FEADBBF000A3391 /* LoginVC.swift in Sources */,
 				A5D9CE8B1FE9D461002AF161 /* AppDelegate.swift in Sources */,
 				A5D9CE8D1FE9D461002AF161 /* FirstViewController.swift in Sources */,
+				A55815F51FEADCA3000A3391 /* InsetTextField.swift in Sources */,
 				A5D9CEA61FE9DE99002AF161 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
