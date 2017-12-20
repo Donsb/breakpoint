@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreatePostVC: UIViewController {
     
@@ -24,6 +25,7 @@ class CreatePostVC: UIViewController {
     /* View Did Load Function. */
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.delegate = self
     } // END View Did Load Function.
     
     
@@ -36,13 +38,24 @@ class CreatePostVC: UIViewController {
     
     /* Close Button Was Pressed Function. */
     @IBAction func closeBtnWasPressed(_ sender: Any) {
-        
+        dismiss(animated: true, completion: nil)
     } // END Close Button Was Pressed Function.
     
     
     /* Send Button Was Pressed Function. */
     @IBAction func sendBtnWasPressed(_ sender: Any) {
-        
+        if textField.text != nil && textField.text == "Say something here..." {
+            sendBtn.isEnabled = false
+            DataService.instance.uploadPost(withMessage: textField.text, forUID: (Auth.auth().currentUser?.uid)!, withGroupKey: nil, sendComplete: { (isComplete) in
+                if isComplete {
+                    self.sendBtn.isEnabled = true
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    self.sendBtn.isEnabled = true
+                    print("There was an error!")
+                }
+            })
+        }
     } // END Send Button Was Pressed Function.
     
     
@@ -50,3 +63,38 @@ class CreatePostVC: UIViewController {
     
     
 } // END Class.
+
+// Extensions.
+
+extension CreatePostVC: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
