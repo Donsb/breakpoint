@@ -51,6 +51,19 @@ class DataService {
     } // END Create DB User Function.
     
     
+    /* Get User Name Function. */
+    func getUsername(forUID uid: String, handler: @escaping (_ username: String)-> ()) {
+        REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
+            guard let userSnapShot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for user in userSnapShot {
+                if user.key == uid {
+                    handler(user.childSnapshot(forPath: "email").value as! String)
+                }
+            }
+        }
+    } // END Get User Name Function.
+    
+    
     /* Upload Post Function. */
     func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool)-> ()) {
         
