@@ -110,6 +110,22 @@ class DataService {
     } // END Get Email Function.
     
     
+    /* Get Ids Function. */
+    func getIds(forUsernames usernames: [String], handler: @escaping (_ uidArray: [String])-> ()) {
+        REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
+            var idArray = [String]()
+            guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for user in userSnapshot {
+                let email = user.childSnapshot(forPath: "email").value as! String
+                if usernames.contains(email) {
+                    idArray.append(user.key)
+                }
+            }
+            handler(idArray)
+        }
+    } // END Get Ids Function.
+    
+    
 } // END Class.
 
 

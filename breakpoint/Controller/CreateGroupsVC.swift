@@ -95,6 +95,7 @@ extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
         return emailArray.count
     } // END Number Of Rows In Section Function.
     
+    
     /* Cell For Row At Function. */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell else { return UITableViewCell() }
