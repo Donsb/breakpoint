@@ -22,6 +22,7 @@ class CreateGroupsVC: UIViewController {
     // Instance Variables.
     
     var emailArray = [String]()
+    var chosenUserArray = [String]()
     
     // Functions.
     
@@ -34,6 +35,13 @@ class CreateGroupsVC: UIViewController {
         emailSearchTextField.delegate = self
         emailSearchTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     } // END iew Did Load Function.
+    
+    
+    /*  */
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        doneBtn.isHidden = true
+    }
     
     
     /* Text Field Did Change Function. */
@@ -95,6 +103,24 @@ extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     } // END Cell For Row At Function.
     
+    
+    /* Did Select Row At Function. */
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? UserCell else { return }
+        if !chosenUserArray.contains(cell.emailLbl.text!) {
+            chosenUserArray.append(cell.emailLbl.text!)
+            groupMemberLbl.text = chosenUserArray.joined(separator: ", ")
+            doneBtn.isHidden = false
+        } else {
+            chosenUserArray = chosenUserArray.filter({ $0 != cell.emailLbl.text! }) // Take out the user from the Array.
+            if chosenUserArray.count >= 1 {
+                groupMemberLbl.text = chosenUserArray.joined(separator: ", ")
+            } else {
+                groupMemberLbl.text = "add people to your group"
+                doneBtn.isHidden = true
+            }
+        }
+    } // END Did Select Row At Function.
     
 } // END Extension.
 

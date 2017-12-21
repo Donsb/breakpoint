@@ -16,6 +16,9 @@ class UserCell: UITableViewCell {
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var checkImage: UIImageView!
     
+    // Instance Variables.
+    
+    var showing = false
     
     // Functions.
     
@@ -34,8 +37,15 @@ class UserCell: UITableViewCell {
     /* Set Selected Function. */
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        if selected {
+            if showing == false {
+                checkImage.isHidden = false
+                showing = true
+            } else {
+                checkImage.isHidden = true
+                showing = false
+            }
+        }
     } // END Set Selected Function.
     
     
