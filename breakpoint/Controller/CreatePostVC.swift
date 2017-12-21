@@ -30,6 +30,13 @@ class CreatePostVC: UIViewController {
     } // END View Did Load Function.
     
     
+    /*  */
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.emailLbl.text = Auth.auth().currentUser?.email
+    }
+    
+    
     /* Did Receive Memory Warning Function. */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -45,7 +52,7 @@ class CreatePostVC: UIViewController {
     
     /* Send Button Was Pressed Function. */
     @IBAction func sendBtnWasPressed(_ sender: Any) {
-        if textField.text != nil && textField.text == "Say something here..." {
+        if textField.text != nil && textField.text != "Say something here..." {
             sendBtn.isEnabled = false
             DataService.instance.uploadPost(withMessage: textField.text, forUID: (Auth.auth().currentUser?.uid)!, withGroupKey: nil, sendComplete: { (isComplete) in
                 if isComplete {
