@@ -26,6 +26,8 @@ class CreateGroupsVC: UIViewController {
     /* View Did Load Function. */
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
     } // END iew Did Load Function.
     
     
@@ -51,6 +53,31 @@ class CreateGroupsVC: UIViewController {
 } // END Class.
 
 
+// Extensions.
+
+extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
+    
+    /* Number of Sections Function. */
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    } // END Number of Sections Function.
+    
+    
+    /* Number Of Rows In Section Function. */
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    } // END Number Of Rows In Section Function.
+    
+    /* Cell For Row At Function. */
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell else { return UITableViewCell() }
+        let profileImage = UIImage(named: "defaultProfileImage")
+        cell.configureCell(progileImage: profileImage!, email: "marty@test.com", isSelected: true)
+        return cell
+    } // END Cell For Row At Function.
+    
+    
+} // END Extension.
 
 
 
