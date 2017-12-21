@@ -322,10 +322,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--View Controller-->
+        <!--Create GroupsVC-->
         <scene sceneID="fNf-CA-v4f">
             <objects>
-                <viewController id="qwM-on-UMK" sceneMemberID="viewController">
+                <viewController id="qwM-on-UMK" customClass="CreateGroupsVC" customModule="breakpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uoh-dL-6wT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -353,10 +353,16 @@
                                         <state key="normal" title="DONE">
                                             <color key="titleColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="doneBtnWasPressed:" destination="qwM-on-UMK" eventType="touchUpInside" id="pFX-M5-yti"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFh-xw-KnB">
                                         <rect key="frame" x="20" y="37.333333333333336" width="21" height="22"/>
                                         <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closeBtnWasPressed:" destination="qwM-on-UMK" eventType="touchUpInside" id="jW4-2e-ukx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -450,6 +456,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ebe-Ri-2nv"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="fxa-LU-T3F" id="Fnm-IS-lx5"/>
+                        <outlet property="doneBtn" destination="2Ed-0G-fmp" id="i0W-sd-QGw"/>
+                        <outlet property="emailSearchTextField" destination="Bhg-iW-XD2" id="5Mh-8t-h2F"/>
+                        <outlet property="groupMemberLbl" destination="Dpi-nt-rjF" id="rxt-Oj-wQx"/>
+                        <outlet property="tableView" destination="9UU-mf-bqe" id="Txd-Ue-Wsa"/>
+                        <outlet property="titleTextField" destination="NIN-3u-SDt" id="4ul-qx-voa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5o-F5-ibK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
