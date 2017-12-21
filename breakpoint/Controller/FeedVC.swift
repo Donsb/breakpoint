@@ -10,6 +10,10 @@ import UIKit
 
 class FeedVC: UIViewController {
     
+    // IBOutlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     // Functions.
     
     
@@ -17,16 +21,14 @@ class FeedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-// END View Did Load Function.
+    } // END View Did Load Function.
     
     
     /* Did Receive Memory Warning Function. */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-// END Did Receive Memory Warning Function.
+    } // END Did Receive Memory Warning Function.
     
     
 } // End Class.
