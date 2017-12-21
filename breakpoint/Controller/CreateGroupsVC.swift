@@ -19,6 +19,9 @@ class CreateGroupsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var groupMemberLbl: UILabel!
     
+    // Instance Variables.
+    
+    var emailArray = [String]()
     
     // Functions.
     
@@ -28,7 +31,23 @@ class CreateGroupsVC: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        emailSearchTextField.delegate = self
+        emailSearchTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     } // END iew Did Load Function.
+    
+    
+    /* Text Field Did Change Function. */
+    @objc func textFieldDidChange() {
+        if emailSearchTextField.text == "" {
+            emailArray = []
+            tableView.reloadData()
+        } else {
+            DataService.instance.getEmail(forSearchQuery: emailSearchTextField.text!, handler: { (returnedEmailArray) in
+                self.emailArray = returnedEmailArray
+                self.tableView.reloadData()
+            })
+        }
+    } // END Text Field Did Change Function.
     
     
     /* Did Receive Memory Warning Function. */
@@ -46,7 +65,7 @@ class CreateGroupsVC: UIViewController {
     
     /* Close Button Was Pressed Function. */
     @IBAction func closeBtnWasPressed(_ sender: Any) {
-        
+        dismiss(animated: true, completion: nil)
     } // END Close Button Was Pressed Function.
     
     
@@ -65,21 +84,23 @@ extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
     
     /* Number Of Rows In Section Function. */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return emailArray.count
     } // END Number Of Rows In Section Function.
     
     /* Cell For Row At Function. */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell else { return UITableViewCell() }
         let profileImage = UIImage(named: "defaultProfileImage")
-        cell.configureCell(progileImage: profileImage!, email: "marty@test.com", isSelected: true)
+        cell.configureCell(progileImage: profileImage!, email: emailArray[indexPath.row], isSelected: true)
         return cell
     } // END Cell For Row At Function.
     
     
 } // END Extension.
 
-
+extension CreateGroupsVC: UITextFieldDelegate {
+    
+}
 
 
 
