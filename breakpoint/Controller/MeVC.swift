@@ -26,6 +26,13 @@ class MeVC: UIViewController {
     } // END View Did Load Function.
     
     
+    /* View Will Appear Function. */
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.emailLbl.text = Auth.auth().currentUser?.email
+    }
+    
+    
     /* Did Receive Memory Warning Function. */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
