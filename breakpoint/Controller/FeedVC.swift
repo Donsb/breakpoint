@@ -14,6 +14,10 @@ class FeedVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    // Instance Variables.
+    
+    var messageArray = [Message]()
+    
     // Functions.
     
     
@@ -23,6 +27,16 @@ class FeedVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     } // END View Did Load Function.
+    
+    
+    /* View Did Appear Function. */
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DataService.instance.getAllFeeMessages { (returnedMessagesArray) in
+            self.messageArray = returnedMessagesArray
+            self.tableView.reloadData()
+        }
+    } // END View Did Appear Function.
     
     
     /* Did Receive Memory Warning Function. */
@@ -41,11 +55,41 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return messageArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as? FeedCell else { return UITableViewCell() }
+        let image = UIImage(named: "defaultProfileImage")
+        let message = messageArray[indexPath.row]
+        
+        cell.configureCell(profileImage: image!, email: message.senderId, content: message.content)
+        return cell
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
