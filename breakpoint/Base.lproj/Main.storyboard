@@ -486,6 +486,9 @@
                                             <constraint firstAttribute="width" constant="30" id="BhU-he-Kny"/>
                                         </constraints>
                                         <state key="normal" image="send"/>
+                                        <connections>
+                                            <action selector="sendBtnWasPressed:" destination="Okk-dm-Lxy" eventType="touchUpInside" id="z36-Jv-dLE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -525,7 +528,6 @@
                         <outlet property="messageTxtField" destination="hgW-I3-IU4" id="ium-8I-l3N"/>
                         <outlet property="sendBtn" destination="oW2-Ga-YX2" id="8Er-XA-kGt"/>
                         <outlet property="sendBtnView" destination="MHj-I1-erZ" id="U66-ja-fcW"/>
-                        <outlet property="sendBtnWasPressed" destination="oW2-Ga-YX2" id="4Ub-w9-lFb"/>
                         <outlet property="tableView" destination="nUr-qh-rlz" id="gFD-1a-yAr"/>
                     </connections>
                 </viewController>

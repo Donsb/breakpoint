@@ -63,7 +63,40 @@ class GroupViewVC: UIViewController {
     } // Back Button Was Pressed Function.
     
     
-    @IBOutlet weak var sendBtnWasPressed: UIButton!
+    /* Send Button Was Pressed Function. */
+    @IBAction func sendBtnWasPressed(_ sender: Any) {
+        
+    } // END Send Button Was Pressed Function.
+    
     
     
 } // END Class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
