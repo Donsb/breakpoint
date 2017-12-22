@@ -24,7 +24,7 @@ class GroupViewVC: UIViewController {
     /* View Did Load Function. */
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        sendBtnView.bindToKeyboard()
         // Do any additional setup after loading the view.
     } // END View Did Load Function.
     
