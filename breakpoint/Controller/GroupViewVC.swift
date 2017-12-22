@@ -10,6 +10,15 @@ import UIKit
 
 class GroupViewVC: UIViewController {
     
+    // IBOutlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var groupTitleLbl: UILabel!
+    @IBOutlet weak var membersLbl: UILabel!
+    @IBOutlet weak var sendBtnView: UIView!
+    @IBOutlet weak var messageTxtField: InsetTextField!
+    @IBOutlet weak var sendBtn: UIButton!
+    
     // Functions
     
     /* View Did Load Function. */
@@ -25,6 +34,15 @@ class GroupViewVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     } // END Did Receive Memory Warning Function.
+    
+    
+    /* Back Button Was Pressed Function. */
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    } // Back Button Was Pressed Function.
+    
+    
+    @IBOutlet weak var sendBtnWasPressed: UIButton!
     
     
 } // END Class.
