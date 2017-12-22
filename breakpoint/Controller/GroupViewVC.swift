@@ -19,6 +19,17 @@ class GroupViewVC: UIViewController {
     @IBOutlet weak var messageTxtField: InsetTextField!
     @IBOutlet weak var sendBtn: UIButton!
     
+    // Instance Variables
+    
+    var group: Group?
+    
+    // Initializers
+    
+    /* init Data */
+    func initData(forGroup group: Group) {
+        self.group = group
+    } // END init Data
+    
     // Functions
     
     /* View Did Load Function. */
@@ -27,6 +38,14 @@ class GroupViewVC: UIViewController {
         sendBtnView.bindToKeyboard()
         // Do any additional setup after loading the view.
     } // END View Did Load Function.
+    
+    
+    /* View Will Appear Function. */
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        groupTitleLbl.text = group?.groupTitle
+        membersLbl.text = group?.members.joined(separator: ", ")
+    } // END View Will Appear Function.
     
     
     /* Did Receive Memory Warning Function. */
