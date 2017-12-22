@@ -367,7 +367,7 @@
         <!--Group ViewVC-->
         <scene sceneID="JZ2-tJ-Sw1">
             <objects>
-                <viewController id="Okk-dm-Lxy" customClass="GroupViewVC" customModule="breakpoint" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupViewVC" id="Okk-dm-Lxy" customClass="GroupViewVC" customModule="breakpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7wX-tW-TaU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
