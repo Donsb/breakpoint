@@ -80,7 +80,6 @@ extension GroupsVC: UITableViewDelegate, UITableViewDataSource {
         guard let groupFeedVC = storyboard?.instantiateViewController(withIdentifier: "GroupViewVC") as? GroupViewVC else { return }
         groupFeedVC.initData(forGroup: groupsArray[indexPath.row])
         presentDetail(groupFeedVC)
-        //present(groupFeedVC, animated: true, completion: nil)
     }
     
 } // END Extension.
