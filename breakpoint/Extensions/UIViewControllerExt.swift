@@ -23,6 +23,19 @@ extension UIViewController {
         present(viewControllerToPresent, animated: false, completion: nil)
     } // END Present Detail Function.
     
+    
+    /* Dismiss Detail Function. */
+    func dismissDetail() {
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromLeft
+        self.view.window?.layer.add(transition, forKey: kCATransition)
+        
+        dismiss(animated: false, completion: nil)
+    } // Dismiss Detail Function.
+    
+    
 } // END Extension.
 
 
