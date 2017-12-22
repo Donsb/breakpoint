@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class GroupViewVC: UIViewController {
     
@@ -22,6 +23,7 @@ class GroupViewVC: UIViewController {
     // Instance Variables
     
     var group: Group?
+    var groupMessages = [Message]()
     
     // Initializers
     
@@ -47,6 +49,13 @@ class GroupViewVC: UIViewController {
         DataService.instance.getEmailsForGroup(group: group!) { (returnedEmails) in
             self.membersLbl.text = returnedEmails.joined(separator: ", ")
         }
+        
+        DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
+            DataService.instance.getAllMessagesFor(desiredGroup: self.group!, handler: { (returnedGroupMessages) in
+                self.groupMessages = returnedGroupMessages
+                self.tableView.reloadData()
+            })
+        }
     } // END View Will Appear Function.
     
     
@@ -65,7 +74,17 @@ class GroupViewVC: UIViewController {
     
     /* Send Button Was Pressed Function. */
     @IBAction func sendBtnWasPressed(_ sender: Any) {
-        
+        if messageTxtField.text != "" {
+            messageTxtField.isEnabled = false
+            sendBtn.isEnabled = false
+            DataService.instance.uploadPost(withMessage: messageTxtField.text!, forUID: (Auth.auth().currentUser?.uid)!, withGroupKey: group?.key, sendComplete: { (complete) in
+                if complete {
+                    self.messageTxtField.text = ""
+                    self.messageTxtField.isEnabled = true
+                    self.sendBtn.isEnabled = true
+                }
+            })
+        }
     } // END Send Button Was Pressed Function.
     
     
@@ -73,7 +92,34 @@ class GroupViewVC: UIViewController {
 } // END Class.
 
 
+// Extensions
 
+extension GroupViewVC: UITableViewDelegate, UITableViewDataSource {
+    
+    /* Number Of Sections Function. */
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    } // END Number Of Sections Function.
+    
+    
+    /* Number Of Rows In Section Function. */
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return groupMessages.count
+    } // END Number Of Rows In Section Function.
+    
+    
+    /* Cell For Row At Index Path Function. */
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupFeedCell", for: indexPath) as? GroupFeedCell else { return UITableViewCell() }
+        let message = groupMessages[indexPath.row]
+        DataService.instance.getUsername(forUID: message.senderId) { (email) in
+            cell.configureCell(profileImage: UIImage(named: "defaultProfileImage")!, email: email, content: message.content)
+        }
+        return cell
+    } // END Cell For Row At Index Path Function.
+    
+    
+} // END Extension.
 
 
 
