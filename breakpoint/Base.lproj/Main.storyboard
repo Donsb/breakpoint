@@ -364,10 +364,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="359.85221674876851"/>
         </scene>
-        <!--View Controller-->
+        <!--Group ViewVC-->
         <scene sceneID="JZ2-tJ-Sw1">
             <objects>
-                <viewController id="Okk-dm-Lxy" sceneMemberID="viewController">
+                <viewController id="Okk-dm-Lxy" customClass="GroupViewVC" customModule="breakpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7wX-tW-TaU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -403,7 +403,7 @@
                                 <rect key="frame" x="0.0" y="114" width="375" height="664"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupFeedCell" rowHeight="100" id="ZLp-AA-Kky">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupFeedCell" rowHeight="100" id="ZLp-AA-Kky" customClass="GroupFeedCell" customModule="breakpoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZLp-AA-Kky" id="K7a-dw-oio">
@@ -448,6 +448,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="contentLbl" destination="cfg-8I-wQ5" id="JiX-Lm-7x0"/>
+                                            <outlet property="emailLbl" destination="PaQ-NF-sh6" id="UNS-Ni-nxa"/>
+                                            <outlet property="profileImage" destination="SUS-KD-t5Q" id="PXZ-ZZ-e6w"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
