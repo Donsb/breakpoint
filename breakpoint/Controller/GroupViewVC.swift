@@ -44,7 +44,9 @@ class GroupViewVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         groupTitleLbl.text = group?.groupTitle
-        membersLbl.text = group?.members.joined(separator: ", ")
+        DataService.instance.getEmailsForGroup(group: group!) { (returnedEmails) in
+            self.membersLbl.text = returnedEmails.joined(separator: ", ")
+        }
     } // END View Will Appear Function.
     
     
