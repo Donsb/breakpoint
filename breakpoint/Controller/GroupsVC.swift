@@ -14,8 +14,11 @@ class GroupsVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    // Functions
+    // Instance Variables
     
+    var groupsArray = [Group]()
+    
+    // Functions
     
     /* View Did Load Function. */
     override func viewDidLoad() {
@@ -23,6 +26,18 @@ class GroupsVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     } // END View Did Load Function.
+    
+    
+    /* View Did Appear Function. */
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
+            DataService.instance.getAllGroups { (returnedGroupsArray) in
+                self.groupsArray = returnedGroupsArray
+                self.tableView.reloadData()
+            }
+        }
+    } // END View Did Appear Function.
     
     
     /* Did Receive Memory Warning Function. */
@@ -47,14 +62,15 @@ extension GroupsVC: UITableViewDelegate, UITableViewDataSource {
     
     /* Number Of Rows In Section Function. */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return groupsArray.count
     } // END Number Of Rows In Section Function.
     
     
     /* Cell For Row At Function. */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath) as? GroupCell else { return UITableViewCell() }
-        cell.configureCell(title: "Nerd Herd", description: "The nrediest nerss around.", memberCount: 3)
+        let group = groupsArray[indexPath.row]
+        cell.configureCell(title: group.groupTitle, description: group.groupDescription, memberCount: group.memberCount)
         return cell
     } // END Cell For Row At Function.
     
