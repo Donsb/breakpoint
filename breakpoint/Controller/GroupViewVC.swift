@@ -38,7 +38,8 @@ class GroupViewVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sendBtnView.bindToKeyboard()
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
     } // END View Did Load Function.
     
     
