@@ -37,7 +37,7 @@ class GroupViewVC: UIViewController {
     /* View Did Load Function. */
     override func viewDidLoad() {
         super.viewDidLoad()
-        sendBtnView.bindToKeyboard()
+        //sendBtnView.bindToKeyboard()
         tableView.delegate = self
         tableView.dataSource = self
     } // END View Did Load Function.
@@ -87,8 +87,9 @@ class GroupViewVC: UIViewController {
             DataService.instance.uploadPost(withMessage: messageTxtField.text!, forUID: (Auth.auth().currentUser?.uid)!, withGroupKey: group?.key, sendComplete: { (complete) in
                 if complete {
                     self.messageTxtField.text = ""
-                    self.messageTxtField.isEnabled = true
-                    self.sendBtn.isEnabled = true
+                    self.messageTxtField.resignFirstResponder()
+                    //self.messageTxtField.isEnabled = true
+                    //self.sendBtn.isEnabled = true
                 }
             })
         }
