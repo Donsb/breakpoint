@@ -82,8 +82,8 @@ class GroupViewVC: UIViewController {
     /* Send Button Was Pressed Function. */
     @IBAction func sendBtnWasPressed(_ sender: Any) {
         if messageTxtField.text != "" {
-            messageTxtField.isEnabled = false
-            sendBtn.isEnabled = false
+            //messageTxtField.isEnabled = false
+            //sendBtn.isEnabled = false
             DataService.instance.uploadPost(withMessage: messageTxtField.text!, forUID: (Auth.auth().currentUser?.uid)!, withGroupKey: group?.key, sendComplete: { (complete) in
                 if complete {
                     self.messageTxtField.text = ""
