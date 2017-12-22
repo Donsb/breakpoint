@@ -13,7 +13,6 @@ class AuthVC: UIViewController {
     
     // Functions.
     
-    
     /* View Did Load Function. */
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,15 +46,17 @@ class AuthVC: UIViewController {
     /* Google Signin Button Was Pressed Function. */
     @IBAction func googleSigninBtnWasPressed(_ sender: Any) {
         
+        // Challenge
+        
     } // END Google Signin Button Was Pressed Function.
     
     
     /* FaceBook Signin Button Was Pressed Function. */
     @IBAction func facebookSigninBtnWasPressed(_ sender: Any) {
         
+        // Challenge
+        
     }// END FaceBook Signin Button Was Pressed Function.
-    
-    
     
     
 } // END Class.

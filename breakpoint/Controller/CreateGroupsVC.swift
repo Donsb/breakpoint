@@ -27,7 +27,6 @@ class CreateGroupsVC: UIViewController {
     
     // Functions.
     
-    
     /* View Did Load Function. */
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +37,11 @@ class CreateGroupsVC: UIViewController {
     } // END iew Did Load Function.
     
     
-    /*  */
+    /* View Will Appear Function. */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         doneBtn.isHidden = true
-    }
+    } // END View Will Appear Function.
     
     
     /* Text Field Did Change Function. */
@@ -141,26 +140,12 @@ extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
         }
     } // END Did Select Row At Function.
     
+    
 } // END Extension.
 
 extension CreateGroupsVC: UITextFieldDelegate {
     
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // No code needed.
+    
+} // END Extension.
 

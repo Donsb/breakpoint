@@ -16,15 +16,15 @@ class DataService {
     // Singleton
     static let instance = DataService()
     
-    
     // Instance Variables
     
+        // Private Variables.
     private var _REF_BASE = DB_BASE
     private var _REF_USERS = DB_BASE.child("users") // Creates a Folder to hold all the users in database.
     private var _REF_GROUPS = DB_BASE.child("groups")
     private var _REF_FEED = DB_BASE.child("feed")
     
-    /* Publica Variables to set values and use the data. */
+        // Publica Variables (to set values and use the data.)
     var REF_BASE: DatabaseReference {
         return _REF_BASE
     }
@@ -40,7 +40,6 @@ class DataService {
     var REF_FEED: DatabaseReference {
         return _REF_FEED
     }
-    
     
     // Functions.
     
@@ -187,37 +186,5 @@ class DataService {
     
     
 } // END Class.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -12,7 +12,6 @@ class ShadowView: UIView {
     
     // Functions.
     
-    
     /* Awake From Nib Function. */
     override func awakeFromNib() {
         self.layer.shadowOpacity = 0.75

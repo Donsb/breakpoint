@@ -18,7 +18,6 @@ class FeedCell: UITableViewCell {
     
     // Functions.
     
-    
     /* Configure Cell Function. */
     func configureCell(profileImage: UIImage, email: String, content: String) {
         self.profileImage.image = profileImage

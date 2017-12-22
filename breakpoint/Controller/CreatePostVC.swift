@@ -18,9 +18,7 @@ class CreatePostVC: UIViewController {
     @IBOutlet weak var textField: UITextView!
     @IBOutlet weak var sendBtn: UIButton!
     
-    
     // Functions.
-    
     
     /* View Did Load Function. */
     override func viewDidLoad() {
@@ -30,11 +28,11 @@ class CreatePostVC: UIViewController {
     } // END View Did Load Function.
     
     
-    /*  */
+    /* View Will Appear Function. */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.emailLbl.text = Auth.auth().currentUser?.email
-    }
+    } // END View Will Appear Function.
     
     
     /* Did Receive Memory Warning Function. */
@@ -67,42 +65,16 @@ class CreatePostVC: UIViewController {
     } // END Send Button Was Pressed Function.
     
     
-    
-    
-    
 } // END Class.
+
 
 // Extensions.
 
 extension CreatePostVC: UITextViewDelegate {
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = ""
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+} // END Extension.
 

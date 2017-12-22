@@ -19,7 +19,6 @@ class MeVC: UIViewController {
     
     // Functions.
     
-    
     /* View Did Load Function. */
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +29,7 @@ class MeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.emailLbl.text = Auth.auth().currentUser?.email
-    }
+    } // END View Will Appear Function.
     
     
     /* Did Receive Memory Warning Function. */
@@ -57,22 +56,5 @@ class MeVC: UIViewController {
     }// END Sign Out Button Was Pressed Function.
     
     
-    
 } // END Class.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

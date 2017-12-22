@@ -12,12 +12,14 @@ class Group {
     
     // Instance Variables
     
+        // Private Variables.
     private var _groupTitle: String
     private var _groupDescription: String
     private var _key: String
     private var _memberCount: Int
     private var _members: [String]
     
+        // Public Variables.
     var groupTitle: String {
         return _groupTitle
     }
@@ -48,29 +50,7 @@ class Group {
         self._memberCount = memberCount
     } // END init.
     
+    
 } // END Class.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -20,7 +20,6 @@ class FeedVC: UIViewController {
     
     // Functions.
     
-    
     /* View Did Load Function. */
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,14 +49,19 @@ class FeedVC: UIViewController {
 
 extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     
+    /* Number Of Sections Function. */
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
-    }
+    } // END Number Of Sections Function.
     
+    
+    /* Number Of Rows In Section Function. */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messageArray.count
-    }
+    } // END Number Of Rows In Section Function.
     
+    
+    /* Cell For Row At Function. */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as? FeedCell else { return UITableViewCell() }
         let image = UIImage(named: "defaultProfileImage")
@@ -67,31 +71,9 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
             cell.configureCell(profileImage: image!, email: returnedUsername, content: message.content)
         }
         return cell
-    }
+    } // END Cell For Row At Function.
     
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+} // END Extension.
 
 

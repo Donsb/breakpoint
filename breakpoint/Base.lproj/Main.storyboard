@@ -35,7 +35,7 @@
                                         <rect key="frame" x="160" y="34.666666666666671" width="55" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="QdB-f4-iTR"/>
-                                            <constraint firstAttribute="width" constant="55" id="hMG-Br-4SH"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="hMG-Br-4SH"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,7 +66,7 @@
                                 <rect key="frame" x="0.0" y="114" width="375" height="615"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="100" id="0ZV-0d-AfL" customClass="FeedCell" customModule="breakpoint" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="100" id="0ZV-0d-AfL" customClass="FeedCell" customModule="breakpoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0ZV-0d-AfL" id="p1M-RF-Hn8">
@@ -262,7 +262,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_groups" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-5X-QDB">
                                         <rect key="frame" x="149.66666666666666" y="34.666666666666671" width="76" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="76" id="G7y-ZK-Fck"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="76" id="G7y-ZK-Fck"/>
                                             <constraint firstAttribute="height" constant="21" id="hDp-yb-RQT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
@@ -294,27 +294,27 @@
                                 <rect key="frame" x="0.0" y="114" width="375" height="615"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" rowHeight="100" id="F01-C5-SPz" customClass="GroupCell" customModule="breakpoint" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" rowHeight="100" id="F01-C5-SPz" customClass="GroupCell" customModule="breakpoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F01-C5-SPz" id="RW1-kj-nbH">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Group Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TST-GM-9nN">
-                                                    <rect key="frame" x="20" y="19" width="332" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Group Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TST-GM-9nN">
+                                                    <rect key="frame" x="20" y="19" width="332" height="27.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
                                                     <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="_ members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLc-GI-lTU">
-                                                    <rect key="frame" x="15" y="75" width="352" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLc-GI-lTU">
+                                                    <rect key="frame" x="15" y="78.666666666666671" width="352" height="16.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                                     <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Group Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipp-ca-T0D">
-                                                    <rect key="frame" x="30" y="47" width="322" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipp-ca-T0D">
+                                                    <rect key="frame" x="30" y="54.333333333333336" width="322" height="16.333333333333336"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                                     <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -379,7 +379,7 @@
                                         <rect key="frame" x="59" y="38" width="300" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="3tX-oZ-WPq"/>
-                                            <constraint firstAttribute="width" constant="300" id="PKM-eB-6Z3"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="PKM-eB-6Z3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -400,13 +400,14 @@
                                     <constraint firstAttribute="trailing" secondItem="igv-Aa-sQo" secondAttribute="trailing" constant="16" id="FCc-f8-mh3"/>
                                     <constraint firstAttribute="height" constant="70" id="FjE-qz-agZ"/>
                                     <constraint firstItem="Nx1-cA-omh" firstAttribute="leading" secondItem="f4V-uZ-ARW" secondAttribute="leading" constant="20" id="NR5-Wn-TQs"/>
+                                    <constraint firstItem="igv-Aa-sQo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f4V-uZ-ARW" secondAttribute="leading" constant="20" symbolic="YES" id="WQc-DH-I7Y"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nUr-qh-rlz">
                                 <rect key="frame" x="0.0" y="130" width="375" height="602"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupFeedCell" rowHeight="100" id="ZLp-AA-Kky" customClass="GroupFeedCell" customModule="breakpoint" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupFeedCell" rowHeight="100" id="ZLp-AA-Kky" customClass="GroupFeedCell" customModule="breakpoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZLp-AA-Kky" id="K7a-dw-oio">
@@ -547,9 +548,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_newgroups" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pE-Yg-Beb">
-                                        <rect key="frame" x="149.66666666666666" y="38" width="76" height="21"/>
+                                        <rect key="frame" x="133.33333333333334" y="38" width="108.66666666666666" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="76" id="qAC-sM-6jr"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="76" id="qAC-sM-6jr"/>
                                             <constraint firstAttribute="height" constant="21" id="qzE-og-N7B"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
@@ -560,7 +561,7 @@
                                         <rect key="frame" x="301" y="30" width="54" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="Lzv-71-mEt"/>
-                                            <constraint firstAttribute="width" constant="54" id="QUp-Xw-QsB"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="54" id="QUp-Xw-QsB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="DONE">
@@ -581,6 +582,7 @@
                                 <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="5Mc-JR-Tvk"/>
+                                    <constraint firstItem="2Ed-0G-fmp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Mpf-YR-6Mf" secondAttribute="leading" constant="20" symbolic="YES" id="5Qc-ut-fEd"/>
                                     <constraint firstItem="7pE-Yg-Beb" firstAttribute="centerY" secondItem="QFh-xw-KnB" secondAttribute="centerY" id="G0D-NV-8aO"/>
                                     <constraint firstItem="7pE-Yg-Beb" firstAttribute="centerX" secondItem="Mpf-YR-6Mf" secondAttribute="centerX" id="Hu5-AI-L8Z"/>
                                     <constraint firstItem="2Ed-0G-fmp" firstAttribute="centerY" secondItem="7pE-Yg-Beb" secondAttribute="centerY" id="VhZ-tz-buU"/>
@@ -735,7 +737,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqA-Nf-cxb">
                                         <rect key="frame" x="149.66666666666666" y="34.666666666666671" width="76" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="76" id="Sr4-eF-niL"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="76" id="Sr4-eF-niL"/>
                                             <constraint firstAttribute="height" constant="21" id="re0-cR-bVr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
@@ -774,7 +776,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@breakpoint.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVB-bI-I0a">
-                                        <rect key="frame" x="40" y="150" width="295" height="21"/>
+                                        <rect key="frame" x="84.666666666666686" y="150" width="206" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="O83-wY-Pgy"/>
                                         </constraints>
@@ -785,10 +787,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="dVB-bI-I0a" firstAttribute="leading" secondItem="qjF-pZ-I4Z" secondAttribute="leading" constant="40" id="218-eX-0UH"/>
                                     <constraint firstItem="dVB-bI-I0a" firstAttribute="top" secondItem="Zdz-dX-7vr" secondAttribute="bottom" constant="20" id="9xU-rl-ywl"/>
+                                    <constraint firstItem="dVB-bI-I0a" firstAttribute="centerX" secondItem="qjF-pZ-I4Z" secondAttribute="centerX" id="D6n-xt-lzU"/>
                                     <constraint firstItem="Zdz-dX-7vr" firstAttribute="top" secondItem="qjF-pZ-I4Z" secondAttribute="top" constant="30" id="NcL-Gi-0pw"/>
-                                    <constraint firstAttribute="trailing" secondItem="dVB-bI-I0a" secondAttribute="trailing" constant="40" id="OnN-rT-FKF"/>
                                     <constraint firstItem="Zdz-dX-7vr" firstAttribute="centerX" secondItem="qjF-pZ-I4Z" secondAttribute="centerX" id="b39-3z-eWU"/>
                                     <constraint firstAttribute="height" constant="275" id="cUX-rK-cTa"/>
                                 </constraints>
@@ -797,7 +798,7 @@
                                 <rect key="frame" x="0.0" y="389" width="375" height="340"/>
                                 <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="Gs0-uM-EsL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="Gs0-uM-EsL">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gs0-uM-EsL" id="cLv-RG-HOm">
@@ -842,8 +843,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="loginBGImage" translatesAutoresizingMaskIntoConstraints="NO" id="C0E-ia-7o8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="389"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBGImage" translatesAutoresizingMaskIntoConstraints="NO" id="C0E-ia-7o8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_breakpoint" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-xe-qex">
                                 <rect key="frame" x="45" y="74" width="285" height="28"/>
@@ -956,7 +957,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6h-pQ-d64">
                                 <rect key="frame" x="147.66666666666666" y="275" width="80" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="xKA-f6-Vwy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="xKA-f6-Vwy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                 <state key="normal" title="Sign In">

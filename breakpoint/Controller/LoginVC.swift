@@ -12,13 +12,10 @@ class LoginVC: UIViewController {
     
     // IBOutlets.
     
-    
     @IBOutlet weak var emailField: InsetTextField!
     @IBOutlet weak var passwordField: InsetTextField!
     
-    
     // Functions.
-    
     
     /* View Did Load Function. */
     override func viewDidLoad() {
@@ -66,36 +63,21 @@ class LoginVC: UIViewController {
     } // END Sign In Button Was Pressed Function.
     
     
-    
     /* Close Button Was Pressed Function. */
     @IBAction func closeBtnWasPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     } // END Close Button Was Pressed Function.
     
     
-    
-    
 } // END Class.
 
 
-//
+// Extensions.
 
 extension LoginVC: UITextFieldDelegate {
     
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // No Code Needed.
+    
+} // END Extension.
 
 

@@ -45,6 +45,7 @@ class GroupViewVC: UIViewController {
     
     /* View Will Appear Function. */
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
         groupTitleLbl.text = group?.groupTitle
         DataService.instance.getEmailsForGroup(group: group!) { (returnedEmails) in
@@ -61,6 +62,7 @@ class GroupViewVC: UIViewController {
                 }
             })
         }
+        
     } // END View Will Appear Function.
     
     
@@ -91,7 +93,6 @@ class GroupViewVC: UIViewController {
             })
         }
     } // END Send Button Was Pressed Function.
-    
     
     
 } // END Class.
@@ -125,29 +126,4 @@ extension GroupViewVC: UITableViewDelegate, UITableViewDataSource {
     
     
 } // END Extension.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
